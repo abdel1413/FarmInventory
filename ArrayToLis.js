@@ -1,13 +1,10 @@
-function ArrayToLis(array){
-    let list = null;
-    for(let i=array.length -1;i>=0; i--){
-        list = {value:array[i], rest :list};
-    }
-    return list;
+function ArrayToList(array) {
+  let list = null;
+  for (let i = array.length - 1; i >= 0; i--) {
+    list = { value: array[i], rest: list };
+  }
+  return list;
 }
-export default ArrayToLis
+export default ArrayToList;
 
-console.log(ArrayToLis([10,10]))
-
-
-
+console.log(ArrayToLis([10, 10]));
