@@ -20,6 +20,7 @@ function Inventory(caws, chicken) {
 }
 
 console.log(Inventory(7, 9));
+//----------------------------------------------------------------
 
 //Instead of passing all the animals into one function,
 //what if we pass name of animal and its given numbe?
@@ -32,7 +33,6 @@ function Converter(number, label) {
 }
 
 //function that calls converter function
-
 function Inventory2(animal1, animal2, animal3) {
   Converter(animal1, "Caws");
   Converter(animal2, "Pigs");
@@ -40,12 +40,14 @@ function Inventory2(animal1, animal2, animal3) {
 }
 
 console.log(Inventory2(7, 5, 9));
+
+//--------------------------------------------------------
+
 //another way
 //create two functions one where we check
 //the number if it is less than 3 digit. If so, then add 0 in front
 //The other function recieve that names of animals and
 //call the first function passing name and the comparing number digit
-
 function FarmIventory(name1, name2, nam3) {
   console.log(`${ZeroPadding(name1, 3)},"caws"`);
   console.log(`${ZeroPadding(name2, 3)},"lam`);
@@ -62,12 +64,21 @@ function ZeroPadding(num) {
 
 FarmIventory(7, 16, 30);
 
-//another way
+//-----------------------------------------------------------
+
+//MORE PROFESSIONAL
 function zeropadd(number, width) {
   let numsString = String(number);
-  while (numsString < width) {
+  while (numsString.length < width) {
     numsString = "0" + numsString;
   }
+  return numsString;
 }
 
-function farmInv(name, name2, name3) {}
+function farmInv(caws, birds, pigs) {
+  console.log(`${zeropadd(caws, 3)} Cows`);
+  console.log(`${zeropadd(birds, 3)} Birds.`);
+  console.log(`${zeropadd(pigs, 3)} Pigs`);
+}
+
+console.log(farmInv(3, 4, 5));
