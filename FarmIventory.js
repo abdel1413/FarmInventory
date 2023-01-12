@@ -47,7 +47,7 @@ console.log(Inventory2(7, 5, 9));
 //create two functions one where we check
 //the number if it is less than 3 digit. If so, then add 0 in front
 //The other function recieve that names of animals and
-//call the first function passing name and the comparing number digit
+//call the first function passing names and their width
 function FarmIventory(name1, name2, nam3) {
   console.log(`${ZeroPadding(name1, 3)},"caws"`);
   console.log(`${ZeroPadding(name2, 3)},"lam`);
@@ -55,7 +55,7 @@ function FarmIventory(name1, name2, nam3) {
 }
 
 function ZeroPadding(num) {
-  let lgth = String(num); // convert num to string;
+  let lgth = String(num);
   while (lgth.length < 3) {
     lgth = "0" + lgth; //concatinate 0 num if length < 3 digit
   }
